@@ -4,16 +4,19 @@ const TopNavContainer = styled.div`
   width: 100%;
   /* min-height: 90px; */
   /* max-height: 90px; */
-  background-color: #555;
+  background-color: white;
   display: flex;
-  padding: 10px 30px;
+  padding: 10px 20px;
   align-items: center;
   justify-content: space-between;
 `;
 
 const TopNavigation = styled.nav`
   display: flex;
-  gap: 60px;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* gap: 60px; */
 `;
 const TopNavigationList = styled.ul`
   display: flex;
@@ -24,6 +27,7 @@ const TopNavigationListItem = styled.li`
   font-size: 16px;
   cursor: pointer;
   font-weight: 600;
+  color: rgb(0, 0, 41);
   &:hover {
     color: #ff7300;
   }
@@ -35,6 +39,8 @@ const TopNavigationListItem = styled.li`
 const TopNavigationSearch = styled.div`
   display: flex;
   align-items: center;
+  border: 2px solid #ff7300;
+  border-radius: 6px;
 `;
 
 const TopNavigationSearchInput = styled.input`
@@ -42,9 +48,13 @@ const TopNavigationSearchInput = styled.input`
   border: none;
   font-size: 16px;
   padding: 2px 0 2px 10px;
+  /* background-color: #ececec; */
 
   &:focus {
     outline: none;
+  }
+  &::placeholder {
+    color: #bebebe;
   }
 `;
 
@@ -54,9 +64,17 @@ const TopNavSearchBtn = styled.button`
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   margin-left: -3px;
+  color: white;
+  background-color: #ff7300;
+
   cursor: pointer;
   text-align: center;
-  background-color: #ff7300;
+  border-left: 2px solid #ff7300;
+  &:hover {
+    background-color: #ff9640;
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+  }
 `;
 
 const TopNav = () => {
@@ -66,7 +84,8 @@ const TopNav = () => {
         <TopNavigationList>
           <TopNavigationListItem className='active'>HOME</TopNavigationListItem>
           <TopNavigationListItem>ABOUT</TopNavigationListItem>
-          <TopNavigationListItem>MY WORK</TopNavigationListItem>
+          <TopNavigationListItem>SERVICES</TopNavigationListItem>
+          <TopNavigationListItem>PROJECTS</TopNavigationListItem>
           <TopNavigationListItem>FAQs</TopNavigationListItem>
           <TopNavigationListItem>CONTACT</TopNavigationListItem>
         </TopNavigationList>

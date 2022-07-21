@@ -3,11 +3,12 @@ import styled from 'styled-components';
 const HomePageContainer = styled.div`
   width: 100%;
   /* padding: 60px; */
-  min-height: 70vh;
+  min-height: 69.5vh;
   position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: cover;
+  overflow: hidden;
   /* margin: 60px; */
 `;
 
@@ -21,7 +22,7 @@ const Overlay = styled.div`
   backdrop-filter: blur(2px);
 `;
 
-const HomePagetitle = styled.h1`
+const HomePageTitle = styled.h1`
   font-size: 42px;
   text-align: center;
 `;
@@ -30,10 +31,10 @@ const HomePage = () => {
   return (
     <HomePageContainer style={{ backgroundImage: `url(${Background})` }}>
       <Overlay>
-        <HomePagetitle>
+        <HomePageTitle>
           SIMPLE SOLUTIONS <br />
           510
-        </HomePagetitle>
+        </HomePageTitle>
       </Overlay>
     </HomePageContainer>
   );

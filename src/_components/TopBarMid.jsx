@@ -1,5 +1,6 @@
 import { BiEnvelope, BiPhone } from 'react-icons/bi';
 
+import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
 import Logo from '../_assets/handyman1.png';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import styled from 'styled-components';
@@ -8,43 +9,65 @@ const TopBarMidContent = styled.div`
   font-weight: 600;
   font-size: 16px;
   /* margin-left: 10%; */
-  padding: 10px 0;
+  padding: 10px 20px;
   cursor: pointer;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   gap: 30px;
   flex: 2;
-  background-color: blue;
+  background-color: rgb(201, 201, 201);
 `;
 
 const TopBarMidContentDiv = styled.div`
   display: flex;
   align-items: center;
   white-space: nowrap;
-  gap: 30px;
+  /* gap: 20px; */
 `;
 
 const TopBarMidImg = styled.img`
-  width: 90px;
+  width: 75px;
   height: auto;
   cursor: pointer;
 `;
 
 const TopBarMidBtn = styled.button`
   /* align-self: center; */
+  display: flex;
+  align-items: center;
   border-radius: 6px;
-  height: 50px;
-  padding: 5px 10px;
+  /* height: 50px; */
+  padding: 10px 10px;
   font-size: 16px;
   cursor: pointer;
-  border: 2px solid #ff7300;
-  background-color: transparent;
-  color: #ff7300;
+  border: 2px solid transparent;
+  background-color: #ff7300;
+  color: white;
   &:hover {
-    background-color: #ff7300;
-    color: white;
+    background-color: #ff9640;
   }
+`;
+const TopBarMidWrapper1 = styled.div`
+  border-right: 2px dotted #ff7300;
+  padding: 10px;
+  min-width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin: 0;
+  padding: 0 20px;
+`;
+const TopBarMidWrapper2 = styled.div`
+  text-align: left;
+  font-weight: 800;
+  font-size: 18px;
+`;
+
+const TopBarP = styled.p`
+  font-weight: 200;
+  font-size: 14px;
 `;
 
 const TopBarMid = () => {
@@ -53,20 +76,31 @@ const TopBarMid = () => {
       <TopBarMidImg src={Logo} alt='Company Logo' />
 
       <TopBarMidContentDiv>
-        <div>
+        <TopBarMidWrapper1>
           <BiPhone className='topBarIcon' />
-          (210)289-7932
-        </div>
-        <div>
+          <TopBarMidWrapper2>
+            (210)289-7932
+            <TopBarP>Need Help, Make a Call</TopBarP>
+          </TopBarMidWrapper2>
+        </TopBarMidWrapper1>
+        <TopBarMidWrapper1>
           <BiEnvelope className='topBarIcon' />
-          Example@email.com
-        </div>
-        <div>
+          <TopBarMidWrapper2>
+            Example@email.com
+            <TopBarP>Send Us an Email</TopBarP>
+          </TopBarMidWrapper2>
+        </TopBarMidWrapper1>
+        <TopBarMidWrapper1 style={{ borderRight: 'none' }}>
           <MdOutlineLocationOn className='topBarIcon' />
-          999 New Street, Bellevue, NE
-        </div>
+          <TopBarMidWrapper2>
+            Nebraska
+            <TopBarP>999 New Street</TopBarP>
+          </TopBarMidWrapper2>
+        </TopBarMidWrapper1>
       </TopBarMidContentDiv>
-      <TopBarMidBtn>Schedule Consultation</TopBarMidBtn>
+      <TopBarMidBtn>
+        Get a Quote <HiOutlineArrowNarrowRight style={{ marginLeft: '5px' }} />
+      </TopBarMidBtn>
     </TopBarMidContent>
   );
 };
