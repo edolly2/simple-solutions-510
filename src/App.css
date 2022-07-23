@@ -17,14 +17,22 @@ input[type="search"]::-webkit-search-results-decoration {
   display: none;
 }
 
-
+main {
+  min-height: 500px;
+}
 
 .socialIcon {
   cursor: pointer;
 }
 
-.topBarIcon {
+.socialIcon:hover,
+.topBarMidIcon:hover {
+  color: #ff9640;
+}
+
+.topBarMidIcon {
   font-size: 40px;
+  cursor: pointer;
   color: #ff7300;
   /* margin-right: 5px; */
 }
@@ -35,5 +43,19 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .checkIcon {
   font-size: 28px;
+  color: #ff7300;
+}
+
+.navLink {
+  text-decoration: none;
+  text-decoration-color: none;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(0, 0, 41);
+}
+
+.navLink:hover,
+.navLink.active {
   color: #ff7300;
 }

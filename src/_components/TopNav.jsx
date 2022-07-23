@@ -1,4 +1,5 @@
 import { BiSearch } from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 const TopNavContainer = styled.div`
   width: 100%;
@@ -82,12 +83,37 @@ const TopNav = () => {
     <TopNavContainer>
       <TopNavigation>
         <TopNavigationList>
-          <TopNavigationListItem className='active'>HOME</TopNavigationListItem>
-          <TopNavigationListItem>ABOUT</TopNavigationListItem>
-          <TopNavigationListItem>SERVICES</TopNavigationListItem>
-          <TopNavigationListItem>PROJECTS</TopNavigationListItem>
-          <TopNavigationListItem>FAQs</TopNavigationListItem>
-          <TopNavigationListItem>CONTACT</TopNavigationListItem>
+          <TopNavigationListItem>
+            <Link to='/' className='navLink active'>
+              HOME
+            </Link>
+          </TopNavigationListItem>
+          <TopNavigationListItem>
+            <Link to='/about' className='navLink'>
+              ABOUT
+            </Link>
+          </TopNavigationListItem>
+          <TopNavigationListItem>
+            <Link to='/services' className='navLink'>
+              SERVICES
+            </Link>
+          </TopNavigationListItem>
+          <TopNavigationListItem>
+            <Link to='/projects' className='navLink'>
+              PROJECTS
+            </Link>
+          </TopNavigationListItem>
+
+          <TopNavigationListItem>
+            <Link to='/help' className='navLink'>
+              HELP
+            </Link>
+          </TopNavigationListItem>
+          <TopNavigationListItem>
+            <Link to='/contact' className='navLink'>
+              CONTACT
+            </Link>
+          </TopNavigationListItem>
         </TopNavigationList>
 
         <TopNavigationSearch>

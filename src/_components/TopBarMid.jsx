@@ -1,6 +1,7 @@
 import { BiEnvelope, BiPhone } from 'react-icons/bi';
 
 import { HiOutlineArrowNarrowRight } from 'react-icons/hi';
+import { Link } from 'react-router-dom';
 import Logo from '../_assets/handyman1.png';
 import { MdOutlineLocationOn } from 'react-icons/md';
 import styled from 'styled-components';
@@ -10,7 +11,7 @@ const TopBarMidContent = styled.div`
   font-size: 16px;
   /* margin-left: 10%; */
   padding: 10px 20px;
-  cursor: pointer;
+  /* cursor: pointer; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -73,25 +74,27 @@ const TopBarP = styled.p`
 const TopBarMid = () => {
   return (
     <TopBarMidContent>
-      <TopBarMidImg src={Logo} alt='Company Logo' />
+      <Link to='/' className='navLink'>
+        <TopBarMidImg src={Logo} alt='Company Logo' />
+      </Link>
 
       <TopBarMidContentDiv>
         <TopBarMidWrapper1>
-          <BiPhone className='topBarIcon' />
+          <BiPhone className='topBarMidIcon' />
           <TopBarMidWrapper2>
             (210)289-7932
             <TopBarP>Need Help, Make a Call</TopBarP>
           </TopBarMidWrapper2>
         </TopBarMidWrapper1>
         <TopBarMidWrapper1>
-          <BiEnvelope className='topBarIcon' />
+          <BiEnvelope className='topBarMidIcon' />
           <TopBarMidWrapper2>
             Example@email.com
             <TopBarP>Send Us an Email</TopBarP>
           </TopBarMidWrapper2>
         </TopBarMidWrapper1>
         <TopBarMidWrapper1 style={{ borderRight: 'none' }}>
-          <MdOutlineLocationOn className='topBarIcon' />
+          <MdOutlineLocationOn className='topBarMidIcon' />
           <TopBarMidWrapper2>
             Nebraska
             <TopBarP>999 New Street</TopBarP>
