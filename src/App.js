@@ -9,6 +9,7 @@ import Header from './_components/Header';
 import HelpPage from './_pages/HelpPage';
 import HomePage from './_pages/HomePage';
 import ProjectsPage from './_pages/ProjectsPage';
+import QuotePage from './_pages/QuotePage';
 import ServicesPage from './_pages/ServicesPage';
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path='/projects' element={<ProjectsPage />} />
           <Route path='/help' element={<HelpPage />} />
           <Route path='/contact' element={<ContactPage />} />
+          <Route path='/quote' element={<QuotePage />} />
         </Routes>
         <Footer />
       </div>

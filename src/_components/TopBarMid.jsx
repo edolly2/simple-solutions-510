@@ -101,9 +101,12 @@ const TopBarMid = () => {
           </TopBarMidWrapper2>
         </TopBarMidWrapper1>
       </TopBarMidContentDiv>
-      <TopBarMidBtn>
-        Get a Quote <HiOutlineArrowNarrowRight style={{ marginLeft: '5px' }} />
-      </TopBarMidBtn>
+      <Link to='/quote' className='navLink'>
+        <TopBarMidBtn>
+          Get a Quote{' '}
+          <HiOutlineArrowNarrowRight style={{ marginLeft: '5px' }} />
+        </TopBarMidBtn>
+      </Link>
     </TopBarMidContent>
   );
 };
