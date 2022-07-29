@@ -1,3 +1,4 @@
+import Carousel from '../_components/Carousel';
 import styled from 'styled-components';
 
 const ProjectsPageContainer = styled.main`
@@ -5,7 +6,11 @@ const ProjectsPageContainer = styled.main`
 `;
 
 const ProjectsPage = () => {
-  return <ProjectsPageContainer>ProjectsPage</ProjectsPageContainer>;
+  return (
+    <ProjectsPageContainer>
+      <Carousel />
+    </ProjectsPageContainer>
+  );
 };
 
 export default ProjectsPage;

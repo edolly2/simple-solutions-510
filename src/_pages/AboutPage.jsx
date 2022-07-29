@@ -1,5 +1,7 @@
+import Choose from '../_assets/choose.jpg';
 import Story from '../_assets/handyman-story.jpg';
 import styled from 'styled-components';
+
 const AboutPageContainer = styled.main`
   background-color: pink;
   display: flex;
@@ -102,7 +104,7 @@ const AboutPage = () => {
       </AboutPageStoryContainer>
       <AboutPageChooseContainer>
         <AboutPageChooseLeft>
-          <AboutPageChooseImg src={Story} alt='#' />
+          <AboutPageChooseImg src={Choose} alt='#' />
         </AboutPageChooseLeft>
         <AboutPageChooseRight>
           <AboutPageChooseTitle>Why Choose Us?</AboutPageChooseTitle>
